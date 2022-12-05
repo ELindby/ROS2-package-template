@@ -21,46 +21,18 @@ def generate_launch_description():
 
     package_name     = 'example_package'
 
-    # node_listener = Node(
-    #     package=package_name,
-    #     executable='my_listener'
-    # )
-
-    # node_talker = Node(
-    #     package=package_name,
-    #     executable='my_talker'
-    # )
-
-    node_campubsub = Node(
+    node_listener = Node(
         package=package_name,
-        executable='cam_pubsub'
+        executable='my_listener'
     )
 
-    node_circlesub = Node(
+    node_talker = Node(
         package=package_name,
-        executable='circle_listener'
-    )      
-
-    node_dnf = Node(
-        package=dnf_package_name,
-        executable="dnf_pubsub"
+        executable='my_talker'
     )
 
 
     return LaunchDescription([
-        # DeclareLaunchArgument(
-        #     'verbose',
-        #     default_value='true',
-        #     description='Extra runtime info.'),
-        DeclareLaunchArgument(
-          'world',
-          default_value=[os.path.join(pkg_dolly_gazebo, 'worlds', 'environment2.world'), ''],
-          #default_value='test_package/test_package/worlds/dolly_empty.world',
-          description='MY DESCRIPTION, BIG WORLD, BIG DREAMS'),
-        gazebo,
-        #node_listener,
-        #node_talker,
-        node_campubsub,   
-        #node_circlesub,
-        node_dnf     
+        node_listener,
+        node_talker 
     ])
