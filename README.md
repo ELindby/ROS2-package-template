@@ -15,11 +15,11 @@ Clean build/install/log folders (clean.sh), and build again.
 
 # Notes on running the project
 Create an alias for sourcing foxy: sfoxy
-    alias sfoxy='source /opt/ros/foxy/setup.bash'
+        alias sfoxy='source /opt/ros/foxy/setup.bash'
 Create an alias for sourcing gazebo: sgz
-    alias sgz='. /usr/share/gazebo/setup.sh'
+        alias sgz='. /usr/share/gazebo/setup.sh'
 Create an alias for sourcing the build: sbuild
-    alias sbuild='source install/setup.bash'
+        alias sbuild='source install/setup.bash'
 Terminal 1:
 - sfoxy
 - sgz
